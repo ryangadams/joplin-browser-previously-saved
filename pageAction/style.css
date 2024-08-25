@@ -1,0 +1,15 @@
+@import url("../global-style.css");
+
+#info-box {
+  max-width: 400px;
+}
+.note-title {
+  font-style: italic;
+}
+.note-date {
+  font-weight: bold;
+}
+.edit {
+  margin-inline-start: -5px;
+  width: 15px;
+}

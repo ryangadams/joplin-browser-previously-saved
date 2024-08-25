@@ -1,0 +1,20 @@
+@import url("../global-style.css");
+
+
+form label {
+  display: block;
+  margin-block-end: 5px;
+}
+form textarea {
+  width: calc(100% - 1em);
+  padding: 0.5em;
+
+  @media (prefers-color-scheme: dark) {
+    color:  var(--dark-theme-text);
+    background-color: var(--dark-theme-bg);
+  }
+}
+
+
+
+

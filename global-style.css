@@ -1,0 +1,27 @@
+:root {
+    --dark-theme-bg: #2b2a33;
+    --dark-theme-text:  #fbfbfe;
+    --dark-theme-link: #85bef6;
+    --light-theme-bg: #f9f9fb;
+    --light-theme-text:  #15141a;
+    --light-theme-link: #007bff;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color:  var(--light-theme-text);
+    background-color: var(--light-theme-bg);
+
+    @media (prefers-color-scheme: dark) {
+        color:  var(--dark-theme-text);
+        background-color: var(--dark-theme-bg);
+    }
+}
+
+a {
+    color: var(--light-theme-link);
+
+    @media (prefers-color-scheme: dark) {
+        color: var(--dark-theme-link);
+    }
+}
