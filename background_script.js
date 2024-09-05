@@ -21,7 +21,17 @@ async function checkForPreviousSave() {
     }
 }
 
+async function afterPageAction() {
+    const allTabs = await browser.tabs.query({active: true, currentWindow: true});
+    allTabs.forEach(tab => {
+        if (tab.url === "about:blank") {
+            setTimeout(() => browser.tabs.remove(tab.id), 2000);
+        }
+    });
+}
+
 browser.tabs.onActivated.addListener(() => checkForPreviousSave());
 
 browser.tabs.onUpdated.addListener(() => checkForPreviousSave(), {properties: ["url"]});
 
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => afterPageAction());

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Ryan's Joplin Extras",
-  "version": "1.0",
+  "name": "View Saved Pages in Joplin",
+  "version": "1.1",
 
   "description": "Makes working with Joplin more pleasant",
   "permissions": [
@@ -26,5 +26,10 @@
   },
   "options_ui": {
     "page": "options/index.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "joplin-extras@rga.me.uk"
+    }
   }
 }

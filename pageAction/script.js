@@ -13,8 +13,9 @@ function buildTemplate(noteData) {
     noteContent.querySelector(".note-title").textContent = noteData.title;
     noteContent.querySelector(".note-title").addEventListener("click", (e) => {
         e.preventDefault();
-        const windowProxy = window.open(`joplin://x-callback-url/openNote?id=${noteData.id}`);
-        windowProxy.close();
+        browser.runtime.sendMessage("close the new tab");
+        const windowProxy = window.open(`joplin://x-callback-url/openNote?id=${noteData.id}`, "joplinView");
+        // windowProxy.close();
     });
     return noteContent;
 }
